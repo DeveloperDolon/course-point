@@ -6,6 +6,7 @@ import Courses from './assets/Courses/Courses'
 function App() {
   const [carts, setCarts] = useState([]);
   const [credit, setCredit] = useState(0);
+  let [totalPrice, setTotalPrice] = useState(0);
 
   const handleCarts = (item) => {
 
@@ -29,6 +30,8 @@ function App() {
       }, 2000);
       return;
     }
+
+    setTotalPrice(totalPrice + item.price);
     setCredit(credit + item.credit_hours);
     setCarts([...carts, item]);
   }
@@ -60,7 +63,9 @@ function App() {
                       }
                     </ol>
 
-                    <h1 className='text-center py-5 border-b-2 text-lg font-medium'>Total Credit Hour: {credit}</h1>
+                    <h1 className='py-5 border-b-2 text-lg font-medium'>Total Credit Hour: {credit}</h1>
+                    
+                    <h1 className='text-lg font-medium pt-5'>Total Price : {totalPrice} USD</h1>
                   </div>
                 </div>
               </div>

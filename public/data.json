@@ -1,0 +1,59 @@
+[
+    {
+    "title": "Introduction to C Programming",
+    "details": "Learn the fundamentals of C programming, including variables, data types, control structures, and functions.",
+    "price": 99,
+    "credit_hours": 4,
+    "image_link": "https://example.com/c_programming.jpg"
+    },
+    {
+    "title": "Introduction to Algorithms",
+    "details": "Discover the principles of algorithm design, analysis, and complexity. Master key algorithms and problem-solving techniques.",
+    "price": 129,
+    "credit_hours": 6,
+    "image_link": "https://example.com/algorithms.jpg"
+    },
+    {
+    "title": "Introduction to C++ for Data Structures and Algorithms",
+    "details": "Build a strong foundation in C++ programming and apply it to data structures and algorithm implementations.",
+    "price": 149,
+    "credit_hours": 5,
+    "image_link": "https://example.com/cplusplus_dsa.jpg"
+    },
+    {
+    "title": "Basic Data Structures",
+    "details": "Learn essential data structures such as arrays, linked lists, stacks, and queues, and their applications.",
+    "price": 79,
+    "credit_hours": 3,
+    "image_link": "https://example.com/data_structures.jpg"
+    },
+    {
+    "title": "Introduction to Object-Oriented Programming in Python",
+    "details": "Explore object-oriented programming concepts using Python and build robust applications.",
+    "price": 109,
+    "credit_hours": 4,
+    "image_link": "https://example.com/python_oop.jpg"
+    },
+    {
+    "title": "Software Engineering",
+    "details": "Learn software development methodologies, project management, and best practices in software engineering.",
+    "price": 169,
+    "credit_hours": 7,
+    "image_link": "https://example.com/software_engineering.jpg"
+    },
+    {
+    "title": "AWS, Cloud Computing and Database (MySQL)",
+    "details": "Get hands-on experience with AWS cloud services and MySQL database management in the cloud.",
+    "price": 199,
+    "credit_hours": 6,
+    "image_link": "https://example.com/aws_mysql.jpg"
+    },
+    {
+    "title": "Problem Solving",
+    "details": "Develop problem-solving skills, algorithmic thinking, and coding abilities through challenging exercises.",
+    "price": 69,
+    "credit_hours": 2,
+    "image_link": "https://example.com/problem_solving.jpg"
+    }
+]
+  

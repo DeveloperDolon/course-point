@@ -1,59 +1,74 @@
 [
     {
+    "id": 1,
     "title": "Introduction to C Programming",
     "details": "Learn the fundamentals of C programming, including variables, data types, control structures, and functions.",
-    "price": 99,
+    "price": 10000,
     "credit_hours": 4,
-    "image_link": "https://example.com/c_programming.jpg"
+    "image_link": "https://i.ibb.co/NtM4yY0/Rectangle-2-2.png"
     },
     {
+    "id": 2,
     "title": "Introduction to Algorithms",
     "details": "Discover the principles of algorithm design, analysis, and complexity. Master key algorithms and problem-solving techniques.",
-    "price": 129,
+    "price": 20000,
     "credit_hours": 6,
-    "image_link": "https://example.com/algorithms.jpg"
+    "image_link": "https://i.ibb.co/VQwM58J/Rectangle-2-3.png"
     },
     {
+    "id": 3,
     "title": "Introduction to C++ for Data Structures and Algorithms",
     "details": "Build a strong foundation in C++ programming and apply it to data structures and algorithm implementations.",
-    "price": 149,
+    "price": 30000,
     "credit_hours": 5,
-    "image_link": "https://example.com/cplusplus_dsa.jpg"
+    "image_link": "https://i.ibb.co/VwMDfFb/Rectangle-2-4.png"
     },
     {
+    "id": 4,
     "title": "Basic Data Structures",
     "details": "Learn essential data structures such as arrays, linked lists, stacks, and queues, and their applications.",
-    "price": 79,
+    "price": 15000,
     "credit_hours": 3,
-    "image_link": "https://example.com/data_structures.jpg"
+    "image_link": "https://i.ibb.co/1mJmBgX/Rectangle-3.png"
     },
     {
+    "id": 5,
     "title": "Introduction to Object-Oriented Programming in Python",
     "details": "Explore object-oriented programming concepts using Python and build robust applications.",
-    "price": 109,
+    "price": 12000,
     "credit_hours": 4,
-    "image_link": "https://example.com/python_oop.jpg"
+    "image_link": "https://i.ibb.co/jWRHhqX/Rectangle-2.png"
     },
     {
+    "id": 6,
     "title": "Software Engineering",
     "details": "Learn software development methodologies, project management, and best practices in software engineering.",
-    "price": 169,
+    "price": 11000,
     "credit_hours": 7,
-    "image_link": "https://example.com/software_engineering.jpg"
+    "image_link": "https://i.ibb.co/8XH1jHT/Rectangle-2-5.png"
     },
     {
-    "title": "AWS, Cloud Computing and Database (MySQL)",
+    "id": 7,
+    "title": "AWS, Cloud Computing",
     "details": "Get hands-on experience with AWS cloud services and MySQL database management in the cloud.",
-    "price": 199,
+    "price": 30000,
     "credit_hours": 6,
-    "image_link": "https://example.com/aws_mysql.jpg"
+    "image_link": "https://i.ibb.co/4fpGrNC/Rectangle-3-1.png"
     },
     {
+    "id": 8,
+    "title": "Database (MySQL)",
+    "details": "Master MySQL database management. Learn installation, configuration, database design, security, optimization, and more for efficient data storage and retrieval.",
+    "price": 23000,
+    "credit_hours": 15,
+    "image_link": "https://i.ibb.co/4RDhfgv/Rectangle-2-1.png"
+    },
+    {
+    "id": 9,
     "title": "Problem Solving",
     "details": "Develop problem-solving skills, algorithmic thinking, and coding abilities through challenging exercises.",
-    "price": 69,
-    "credit_hours": 2,
-    "image_link": "https://example.com/problem_solving.jpg"
+    "price": 23000,
+    "credit_hours": 10,
+    "image_link": "https://i.ibb.co/BP1sVBF/Rectangle-2-6.png"
     }
 ]
-  

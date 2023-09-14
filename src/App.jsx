@@ -43,13 +43,13 @@ function App() {
           <h1 className='text-4xl text-center py-10 font-semibold'>Course Registration</h1>
         </header>
 
-        <main className='max-w-7xl mx-auto'>
-          <div className='flex gap-5'>
-            <div className='w-[75%]'>
+        <main className='max-w-7xl mx-auto lg:px-0 px-3'>
+          <div className='flex md:flex-row flex-col gap-5'>
+            <div className='lg:w-[75%] md:w-[75%]'>
               <Courses handleCarts={handleCarts}></Courses>
             </div>
 
-            <div className='w-[25%]'>
+            <div className='lg:w-[25%] md:w-[25%]]'>
               <div className='card bg-white py-5 px-5'>
                 <h1 className='font-semibold text-lg text-center w-full text-blue-500 border-b-2 pb-4'>Credit Hour Remaining {(20 - credit)} hr</h1>
 

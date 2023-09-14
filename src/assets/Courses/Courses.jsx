@@ -15,7 +15,7 @@ export default function Courses({handleCarts}) {
     },[])
 
   return (
-    <div className="grid grid-cols-3 gap-5 items-stretch">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 items-stretch">
       {
         courses.map(item => <Course key={item.id} item={item} handleCarts={handleCarts}></Course>)
       }

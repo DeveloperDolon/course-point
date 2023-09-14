@@ -11,8 +11,8 @@ export default function Course({item, handleCarts}) {
                     <img src={item.image_link} alt="Shoes" className="rounded-xl" />
                 </figure>
 
-                <div className="card mt-3 items-center">
-                    <h2 className="card-title text-center">{item.title}</h2>
+                <div className="card mt-3 items-left">
+                    <h2 className="card-title text-left">{item.title}</h2>
                     <p className='text-sm text-left mt-3'>{item.details}</p>
                 </div>
             </div>
@@ -33,5 +33,6 @@ export default function Course({item, handleCarts}) {
 
 Course.propTypes = {
     item: PropTypes.object,
+    handleCarts: PropTypes.func
 
 }

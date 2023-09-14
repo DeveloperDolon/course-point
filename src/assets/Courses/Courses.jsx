@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useState } from "react"
+import PropTypes from 'prop-types';
 import Course from "./Course";
 
 
-export default function Courses() {
+export default function Courses({handleCarts}) {
 
     const [courses, setCourses] = useState([]);
 
@@ -16,8 +17,12 @@ export default function Courses() {
   return (
     <div className="grid grid-cols-3 gap-5 items-stretch">
       {
-        courses.map(item => <Course key={item.id} item={item}></Course>)
+        courses.map(item => <Course key={item.id} item={item} handleCarts={handleCarts}></Course>)
       }
     </div>
   )
+}
+
+Courses.propTypes = {
+    handleCarts: PropTypes.func
 }

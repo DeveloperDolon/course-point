@@ -1,9 +1,27 @@
 
+import { useState } from 'react';
 import './App.css'
 import Courses from './assets/Courses/Courses'
 
 function App() {
+  const [carts, setCarts] = useState([]);
+  const [credit, setCredit] = useState(0);
 
+  const handleCarts = (item) => {
+
+    const isExist = carts.find(e => item === e);
+
+    if(isExist) {
+      const toastContent = document.querySelector("#toast-content");
+      toastContent.classList.remove("hidden");
+      setTimeout(() => {
+        toastContent.classList.add("hidden");
+      }, 2000);
+      return;
+    }
+    setCredit(credit + item.credit_hours);
+    setCarts([...carts, item]);
+  }
 
   return (
     <>
@@ -13,12 +31,37 @@ function App() {
         </header>
 
         <main className='max-w-7xl mx-auto'>
-          <div className='flex justify-between'>
+          <div className='flex gap-5'>
             <div className='w-[75%]'>
-              <Courses></Courses>
+              <Courses handleCarts={handleCarts}></Courses>
             </div>
 
-            <div className='w-[20%]'>
+            <div className='w-[25%]'>
+              <div className='card bg-white py-5 px-5'>
+                <h1 className='font-semibold text-lg text-center w-full text-blue-500 border-b-2 pb-4'>Credit Hour Remaining {credit} hr</h1>
+
+                <div>
+                  <h1 className='pt-4 pb-5 font-semibold text-lg'>Course Name</h1>
+
+                  <div>
+                    <ol className='list-decimal pl-5 space-y-2'>
+                      {
+                        carts.map(item => <li key={item.id}>{item.title}</li>)
+                      }
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+
+              <div id='toast-content' className='hidden'>
+                <div className="toast toast-end">
+                  <div className="alert alert-error text-white">
+                    <span>Sorry your item is already taken!!</span>
+                  </div>
+                </div>
+              </div>
+
 
             </div>
           </div>

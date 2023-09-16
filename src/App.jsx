@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import './App.css'
 import Courses from './assets/Courses/Courses'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [carts, setCarts] = useState([]);
@@ -13,27 +15,23 @@ function App() {
     const isExist = carts.find(e => item === e);
 
     if(isExist) {
-      const toastContent = document.querySelector("#toast-content");
-      toastContent.classList.remove("hidden");
-
-      setTimeout(() => {
-        toastContent.classList.add("hidden");
-      }, 2000);
+      notify(true);
       return;
     }
     if((credit + item.credit_hours) > 20) {
-      const creditToast = document.querySelector("#credit-toast");
-      
-      creditToast.classList.remove("hidden");
-      setTimeout(() => {
-        creditToast.classList.add("hidden");
-      }, 2000);
-      return;
+      return notify(false);
     }
 
     setTotalPrice(totalPrice + item.price);
     setCredit(credit + item.credit_hours);
     setCarts([...carts, item]);
+  }
+
+  const notify = (existingNotification) => {
+    if(existingNotification) {
+      return toast('This course is already taken!!');
+    }
+    return toast("Your credit limit is over!!");
   }
 
   return (
@@ -47,6 +45,7 @@ function App() {
           <div className='flex md:flex-row flex-col gap-5'>
             <div className='lg:w-[75%] md:w-[75%]'>
               <Courses handleCarts={handleCarts}></Courses>
+              <ToastContainer></ToastContainer>
             </div>
 
             <div className='lg:w-[25%] md:w-[25%]]'>
@@ -69,24 +68,6 @@ function App() {
                   </div>
                 </div>
               </div>
-
-
-              <div id='toast-content' className='hidden'>
-                <div className="toast toast-end">
-                  <div className="alert alert-error text-white">
-                    <span>Sorry your item is already taken!!</span>
-                  </div>
-                </div>
-              </div>
-
-              <div id='credit-toast' className='hidden'>
-                <div className="toast toast-end">
-                  <div className="alert alert-warning text-white">
-                    <span>Sorry your credit limit is over!! Can&apos;t take more</span>
-                  </div>
-                </div>
-              </div>
-
 
             </div>
           </div>
